@@ -17,6 +17,8 @@ export class AppComponent {
   selezione: NuovoPost=new NuovoPost();
   PostSalvato: Array<NuovoPost> = [];
   nuovo: boolean = false;
+  log: boolean = false;
+  constructor(private service: PostserviceService) {}
 
   getKey() {
     this.service.Key().then(key => {
