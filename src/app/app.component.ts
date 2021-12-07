@@ -16,4 +16,9 @@ export class AppComponent {
   key = '';
   selezione: NuovoPost=new NuovoPost();
   PostSalvato: Array<NuovoPost> = [];
+  nuovo: boolean = false;
+
+  aggiungi() {
+    this.nuovo = true;
+  }
 }
