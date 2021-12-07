@@ -1,27 +1,15 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-chiave',
   templateUrl: './chiave.component.html',
-  styleUrls: ['./chiave.component.css'],
+  styleUrls: ['./chiave.component.css']
 })
-export class ChiaveComponent {
-  @Output() newKeyEvent = new EventEmitter<string>();
-  @Output() newAltroEvent = new EventEmitter();
+export class ChiaveComponent implements OnInit {
 
-  UsaChiave(key:string){
-    this.newKeyEvent.emit(key);
+  constructor() { }
+
+  ngOnInit() {
   }
 
-  PrendiChiave(){
-
-    this.newAltroEvent.emit();
-
-  }
-
-
-
-  constructor() {}
-
-  ngOnInit() {}
 }
