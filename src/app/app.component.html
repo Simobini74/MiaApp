@@ -1,4 +1,4 @@
 <h1>{{ name }}</h1>
-<app-chiave></app-chiave> 
+<app-chiave (newKeyEvent)="login($event)"(newAltroEvent)="getKey()"></app-chiave> 
 <button (click)="aggiungi()">INSERISCI UN NUOVO POSTIT</button>
 <p>La tua Chiave è {{key}}</p>
