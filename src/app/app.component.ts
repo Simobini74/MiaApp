@@ -14,4 +14,6 @@ export class NuovoPost{
 export class AppComponent {
   name = 'Applicazione Postit ';
   key = '';
+  selezione: NuovoPost=new NuovoPost();
+  PostSalvato: Array<NuovoPost> = [];
 }
