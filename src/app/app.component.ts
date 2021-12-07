@@ -1,6 +1,10 @@
 import { Component, VERSION } from '@angular/core';
 import { PostserviceService } from './postservice.service';
 
+export class NuovoPost{
+  titolo: string;
+  contenuto: string;
+}
 
 @Component({
   selector: 'my-app',
@@ -9,5 +13,5 @@ import { PostserviceService } from './postservice.service';
 })
 export class AppComponent {
   name = 'Applicazione Postit ';
-  
+  key = '';
 }
