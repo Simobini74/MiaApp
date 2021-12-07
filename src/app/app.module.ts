@@ -5,12 +5,12 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HelloComponent } from './hello.component';
 import { ChiaveComponent } from './chiave/chiave.component';
-
+import { PostserviceService } from './postservice.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
   declarations: [AppComponent, HelloComponent, ChiaveComponent],
   bootstrap: [AppComponent],
-  
+  providers: [PostserviceService],
 })
 export class AppModule {}
