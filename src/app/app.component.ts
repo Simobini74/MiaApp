@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { PostserviceService } from './postservice.service';
 
 
 @Component({
@@ -8,4 +9,5 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   name = 'Applicazione Postit ';
+  
 }
