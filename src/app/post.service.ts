@@ -11,7 +11,18 @@ export class PostService {
     let promise = fetch(this.apiURL + '/get?key=' + this.apiKEY);
     return promise;
   }
-  
-
-
+  public postData(data: string) {
+    let promise1 = fetch(
+      this.apiURL + '/post?key=' + this.apiKEY + '&msg=' + data,
+      { method: 'POST' }
+    );
+    return promise1;
+  }
+  public Key() {
+    let promise2 = fetch(this.apiURL + '/new', { method: 'POST' }).then(
+      (response) => response.json(),
+      (error) => alert(error)
+    );
+    return promise2;
+  }
 }
