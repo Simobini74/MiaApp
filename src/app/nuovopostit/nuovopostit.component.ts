@@ -9,6 +9,14 @@ export class NuovopostitComponent {
 
   @Output() newPostEvent = new EventEmitter<any>();
 
+  createPost(titolo: string, contenuto: string, imp: boolean) {
+    if (titolo != '') {
+      this.newPostEvent.emit({ titolo, contenuto, imp});
+    } else {
+      alert('Il titolo non può essere vuoto');
+    }
+  }
+
   constructor() { }
 
   ngOnInit() {
