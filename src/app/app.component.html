@@ -1,6 +1,9 @@
 <h1>{{ name }}</h1>
-<app-chiave (newKeyEvent)="login($event)"(newAltroEvent)="getKey()"></app-chiave> 
-
+<div *ngIf="log == false; else Else">
+<app-chiave (newKeyEvent)="login($event)"(newAltroEvent)="getKey()"></app-chiave>
+ </div>
+ <ng-template #Else>
 <p>La tua Chiave è {{key}}</p>
+ </ng-template>
 <button (click)="aggiungi()">INSERISCI UN NUOVO POSTIT</button>
 <app-nuovopostit></app-nuovopostit>
