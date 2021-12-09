@@ -20,6 +20,15 @@ export class AppComponent {
   log: boolean = false;
   constructor(private service: PostserviceService) {}
 
+  addPost(newPostit: NuovoPost) {
+    this.service.apiKEY = this.key;
+    this.PostSalvato.push(newPostit);
+    let newmsg: string = JSON.stringify(this.PostSalvato);
+    this.service
+      .postData(newmsg)
+      .then(response => response.json(), error => alert(error));
+  }
+
   login(k: string) {
     this.service.apiKEY = k;
     this.service

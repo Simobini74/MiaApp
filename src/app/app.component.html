@@ -6,9 +6,7 @@
 <p>La tua Chiave è {{key}}</p>
  </ng-template>
  <div *ngIf="nuovo == true; else nonNuovo"> 
-   <app-nuovopostit>
-<button (click)="aggiungi()">INSERISCI UN NUOVO POSTIT</button>
-</app-nuovopostit>
+ <app-nuovopostit (newPostEvent)="addPost($event)"></app-nuovopostit>
  </div>
  <ng-template #nonNuovo>
  <button (click)="crea()">INSERISCI UN NUOVO POSTIT</button>
