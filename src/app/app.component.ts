@@ -20,12 +20,27 @@ export class AppComponent {
   log: boolean = false;
   constructor(private service: PostserviceService) {}
 
+  showOne(id: NuovoPost) {
+    this.selezione.titolo = id.titolo;
+    this.selezione.contenuto = id.contenuto;
+  }
+
   addPost(newPostit: NuovoPost) {
     this.service.apiKEY = this.key;
     this.PostSalvato.push(newPostit);
     let newmsg: string = JSON.stringify(this.PostSalvato);
     this.service
       .postData(newmsg)
+      .then(response => response.json(), error => alert(error));
+  }
+
+  deletePost(id: object) {
+    this.PostSalvato = this.PostSalvato.filter(postit => postit != id);    
+    this.selezione.contenuto = undefined;
+    this.selezione.titolo = undefined;
+    let objToString: string = JSON.stringify(this.PostSalvato);
+    this.service
+      .postData(objToString)
       .then(response => response.json(), error => alert(error));
   }
 
