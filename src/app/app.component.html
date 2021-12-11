@@ -4,10 +4,11 @@
  </div>
  <ng-template #Else>
 <p>La tua Chiave è {{key}}</p>
- </ng-template>
+
  <div *ngIf="nuovo == true; else nonNuovo"> 
  <app-nuovopostit (newPostEvent)="addPost($event)"></app-nuovopostit>
  </div>
  <ng-template #nonNuovo>
  <button (click)="aggiungi()">INSERISCI UN NUOVO POSTIT</button>
 </ng-template>
+ </ng-template>
