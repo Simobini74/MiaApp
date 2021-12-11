@@ -7,10 +7,11 @@ import { HelloComponent } from './hello.component';
 import { ChiaveComponent } from './chiave/chiave.component';
 import { PostserviceService } from './postservice.service';
 import { NuovopostitComponent } from './nuovopostit/nuovopostit.component';
+import { NotificaComponent } from './notifica/notifica.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
-  declarations: [AppComponent, HelloComponent, ChiaveComponent, NuovopostitComponent],
+  declarations: [AppComponent, HelloComponent, ChiaveComponent, NuovopostitComponent, NotificaComponent],
   bootstrap: [AppComponent],
   providers: [PostserviceService],
 })
