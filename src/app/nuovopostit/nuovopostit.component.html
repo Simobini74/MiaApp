@@ -4,6 +4,7 @@ Titolo: <input #nuovoT>
 Contenuto: <input #nuovoC>
 <br><br>
 <button (click)="creaPost">Inserisci</button>
+<button (click)="creaPost(nuovoT.value, nuovoC.value);nuovoT.value='';nuovoC.value=''; ">SALVA</button>
 
 <div id="alert"></div>
 

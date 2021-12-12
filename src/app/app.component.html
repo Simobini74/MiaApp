@@ -7,9 +7,15 @@
  <div *ngIf="nuovo == true; else nonNuovo"> 
  <app-nuovopostit (newPostEvent)="addPost($event)"></app-nuovopostit>
  </div>
-
+ <ng-template #elseBlock>
+ <ul>   
+   <li *ngFor="let obj of PostSalvato">
+     <button (click)="showOne(obj)">{{obj.titolo}}</button>
+     <button (click)="deletePost(obj)">ELIMINA POSTIT</button>
+   </li>
+ </ul>
+</ng-template>
  <app-notifica [selezioneC]="selezione"> </app-notifica>
-
  <ng-template #nonNuovo>
  <button (click)="aggiungi()">INSERISCI UN NUOVO POSTIT</button>
 </ng-template>
