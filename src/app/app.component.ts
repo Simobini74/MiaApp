@@ -17,6 +17,7 @@ export class AppComponent {
   selezione: NuovoPost=new NuovoPost();
   PostSalvato: Array<NuovoPost> = [];
   nuovo: boolean = false;
+  importants: Array<NuovoPost>;
   log: boolean = false;
   click: boolean = false;
   constructor(private service: PostserviceService) {}
