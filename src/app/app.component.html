@@ -24,12 +24,13 @@
 </ng-template>
 <app-notifica [selezioneC]="selezione"> </app-notifica>
 </ng-template>
- <div> 
+<div *ngIf="nuovo == true; else nonNuovo"> 
  <app-nuovopostit (newPostEvent)="addPost($event)"></app-nuovopostit>
- <ng-template #nonNuovo>
+</div>
+ <ng-template #nonNuovo >
  <button (click)="aggiungi()">INSERISCI UN NUOVO POSTIT</button>
 </ng-template>
-<br /><br /> 
- </div>
+
+ 
 
  
