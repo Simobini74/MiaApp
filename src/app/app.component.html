@@ -6,22 +6,11 @@
 <p>La tua Chiave è {{key}}</p>
 <div *ngIf="PostSalvato.length == 0; else cisono">
 </div>
-<ng-template #cisono>
-<ul *ngIf="click == true; else elseBlock">
-  <li *ngFor="let objImp of importants">
-    <button (click)="Mostra(objImp)">{{objImp.titolo}}</button>
-    <button (click)="Elimina(objImp)">ELIMINA POSTIT</button>
-  </li>
-  <br />  
-</ul>
-<ng-template #elseBlock>
-<ul>  
+<ng-template #cisono> 
   <li *ngFor="let obj of PostSalvato">
     <button (click)="Mostra(obj)">{{obj.titolo}}</button>
     <button (click)="Elimina(obj)">ELIMINA POSTIT</button>
   </li>
-</ul>
-</ng-template>
 <app-notifica [selezioneC]="selezione"> </app-notifica>
 </ng-template>
 <div *ngIf="nuovo == true; else nonNuovo"> 
