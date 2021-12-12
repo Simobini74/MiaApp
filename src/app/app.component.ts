@@ -18,6 +18,7 @@ export class AppComponent {
   PostSalvato: Array<NuovoPost> = [];
   nuovo: boolean = false;
   log: boolean = false;
+  click: boolean = false;
   constructor(private service: PostserviceService) {}
 
   showOne(id: NuovoPost) {

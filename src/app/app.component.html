@@ -4,10 +4,10 @@
  </div>
  <ng-template #Else>
 <p>La tua Chiave è {{key}}</p>
-
  <div *ngIf="nuovo == true; else nonNuovo"> 
  <app-nuovopostit (newPostEvent)="addPost($event)"></app-nuovopostit>
  </div>
+
  <app-notifica [selezioneC]="selezione"> </app-notifica>
 
  <ng-template #nonNuovo>
