@@ -9,16 +9,16 @@
 <ng-template #cisono>
 <ul *ngIf="click == true; else elseBlock">
   <li *ngFor="let objImp of importants">
-    <button (click)="showOne(objImp)">{{objImp.titolo}}</button>
-    <button (click)="deletePost(objImp)">ELIMINA POSTIT</button>
+    <button (click)="Mostra(objImp)">{{objImp.titolo}}</button>
+    <button (click)="Elimina(objImp)">ELIMINA POSTIT</button>
   </li>
   <br />  
 </ul>
 <ng-template #elseBlock>
 <ul>  
   <li *ngFor="let obj of PostSalvato">
-    <button (click)="showOne(obj)">{{obj.titolo}}</button>
-    <button (click)="deletePost(obj)">ELIMINA POSTIT</button>
+    <button (click)="Mostra(obj)">{{obj.titolo}}</button>
+    <button (click)="Elimina(obj)">ELIMINA POSTIT</button>
   </li>
 </ul>
 </ng-template>

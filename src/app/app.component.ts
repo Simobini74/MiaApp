@@ -22,7 +22,7 @@ export class AppComponent {
   click: boolean = false;
   constructor(private service: PostserviceService) {}
 
-  showOne(id: NuovoPost) {
+  Mostra(id: NuovoPost) {
     this.selezione.titolo = id.titolo;
     this.selezione.contenuto = id.contenuto;
   }
@@ -36,7 +36,7 @@ export class AppComponent {
       .then(response => response.json(), error => alert(error));
   }
 
-  deletePost(id: object) {
+  Elimina(id: object) {
     this.PostSalvato = this.PostSalvato.filter(postit => postit != id);    
     this.selezione.contenuto = undefined;
     this.selezione.titolo = undefined;
