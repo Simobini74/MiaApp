@@ -25,7 +25,7 @@ export class AppComponent {
     this.selezione.contenuto = id.contenuto;
   }
 
-  addPost(newPostit: NuovoPost) {
+  aggiungiPost(newPostit: NuovoPost) {
     this.service.apiKEY = this.key;
     this.PostSalvato.push(newPostit);
     let newmsg: string = JSON.stringify(this.PostSalvato);
